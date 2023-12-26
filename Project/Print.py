@@ -3,9 +3,13 @@ import subprocess
 import win32com.client
 import sys
 
+printer_name = 'Canon G2020 series'
+sumatraEXE_file_path = 'C:\\Users\\USER\\AppData\\Local\\SumatraPDF\\SumatraPDF.exe';
+
+
 def print_pdf(file_path, printer_name):
     # Use subprocess to open SumatraPDF and print the PDF file
-    subprocess.run(['C:\\Users\\USER\\AppData\\Local\\SumatraPDF\\SumatraPDF.exe', '-print-to', printer_name, file_path], shell=True)
+    subprocess.run([sumatraEXE_file_path , '-print-to', printer_name, file_path], shell=True)
 
 def print_docx(file_path, printer_name):
     word = win32com.client.Dispatch("Word.Application")
@@ -23,7 +27,6 @@ if len(sys.argv) != 2:
     sys.exit(1)
 
 file_to_print = sys.argv[1]
-printer_name = 'Canon G2020 series'
 
 file_extension = file_to_print.split('.')[-1].lower()
 
