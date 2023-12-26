@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>3RPrint</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="box">
+            <form  id="uploadForm" action="upload.php" method="post" enctype="multipart/form-data">
+                <div class="input-bx">
+                    <h2 class="upload-area-title">3R Printer</h2>
+                    <img src="printer.jpeg" alt="image" class="printer">
+
+                        <input type="file" id="document" name="document" accept=".docx,.pdf,.txt,.doc" required hidden>
+                        <label for="document" class="uploadlabel">
+                            <span><i class="fa fa-cloud-upload"></i></span>
+                            <p>Click To Upload</p>
+                        </label>
+                        <p>File type: docx , pdf , txt , doc</p>
+                      
+                </div>
+                <div id="filewrapper">
+                    <!-- <h3 class="uploaded">Uploaded Documents</h3> -->
+                    <!-- <div class="showfilebox">
+                        <div class="left">
+                            <span class="filetype">Pdf</span>
+                            <h3>Rasya.pdf</h3>
+                        </div>
+                        <div class="right">
+                            <span>&#215;</span>
+                        </div>
+                    </div> -->
+                </div>
+
+                <input type="submit" class = "submit" value="Print Paper" >
+            </form>
+        </div>
+
+
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
